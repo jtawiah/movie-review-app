@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+	has_many :movie_items
 validates :title, :release_year, :price, :description, :director, :stock, presence: true
 
 validates :release_year, numericality: { only_integer: true }
